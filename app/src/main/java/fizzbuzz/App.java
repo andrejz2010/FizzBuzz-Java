@@ -10,6 +10,7 @@ public class App {
         return a % b == 0;
     }
 
+
     public static void fizzbuzz() {
 
 
