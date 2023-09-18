@@ -17,11 +17,9 @@ public class App {
         for (int i = 1; i <= 300; i++) {
             String output = "";
 
+
             if (isDivideble(i, 17)) {
-                if (isDivideble(i, 11)) {
-                    output = "";
-                    output += "Bong";
-                }
+
                 if (isDivideble(i, 7)) {
                     output += "Bang";
                 }
@@ -33,6 +31,9 @@ public class App {
                 }
                 if (isDivideble(i, 3)) {
                     output += "Fizz";
+                }
+                if (isDivideble(i, 11)) {
+                    output += "Bong";
                 }
 
 
@@ -52,8 +53,8 @@ public class App {
                     output += "Bang";
                 }
                 if (isDivideble(i, 11)) {
-                    output = "";
-                    output += "Bong";
+
+                    output = "Bong";
                 }
             }
 
