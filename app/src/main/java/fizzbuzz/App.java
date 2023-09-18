@@ -4,24 +4,65 @@
 package fizzbuzz;
 
 public class App {
+
+
+    public static boolean isDivideble(int a, int b) {
+        return a % b == 0;
+    }
+
     public static void fizzbuzz() {
 
-        for (int i = 1; i <= 100; i++) {
-            String result = "";
 
-            if (i % 5 == 0 && i % 3 == 0) {
-                result = "fizzbuzz";
-            } else if (i % 3 == 0) {
-                result += "fizz";
-            } else if (i % 5 == 0) {
-                result += "buzz";
+        for (int i = 1; i <= 300; i++) {
+            String output = "";
+
+            if (isDivideble(i, 17)) {
+                if (isDivideble(i, 11)) {
+                    output = "";
+                    output += "Bong";
+                }
+                if (isDivideble(i, 7)) {
+                    output += "Bang";
+                }
+                if (isDivideble(i, 5)) {
+                    output += "Buzz";
+                }
+                if (isDivideble(i, 13)) {
+                    output += "Fezz";
+                }
+                if (isDivideble(i, 3)) {
+                    output += "Fizz";
+                }
+
+
             } else {
-                result += i;
-            }
-            System.out.println(result);
+                if (isDivideble(i, 3)) {
+                    output += "Fizz";
+                }
 
+                if (isDivideble(i, 13)) {
+                    output += "Fezz";
+                }
+
+                if (isDivideble(i, 5)) {
+                    output += "Buzz";
+                }
+                if (isDivideble(i, 7)) {
+                    output += "Bang";
+                }
+                if (isDivideble(i, 11)) {
+                    output = "";
+                    output += "Bong";
+                }
+            }
+
+            if (output.length() == 0) {
+                output = String.valueOf(i);
+            }
+            System.out.println(output);
         }
     }
+
 
     public static void main(String[] args) {
         fizzbuzz();
