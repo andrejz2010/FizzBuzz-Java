@@ -18,50 +18,37 @@ public class App {
             String output = "";
 
 
-            if (isDivideble(i, 17)) {
+            if (isDivideble(i, 3)) {
+                output += "Fizz";
+            }
 
-                if (isDivideble(i, 7)) {
-                    output += "Bang";
-                }
-                if (isDivideble(i, 5)) {
-                    output += "Buzz";
-                }
-                if (isDivideble(i, 13)) {
-                    output += "Fezz";
-                }
-                if (isDivideble(i, 3)) {
-                    output += "Fizz";
-                }
+
+            if (isDivideble(i, 13)) {
                 if (isDivideble(i, 11)) {
-                    output += "Bong";
-                }
+                    output += "FezzBong";
+                    System.out.println(i + ") " + output);
+                    continue;
 
-
-            } else {
-                if (isDivideble(i, 3)) {
-                    output += "Fizz";
-                }
-
-                if (isDivideble(i, 13)) {
+                } else {
                     output += "Fezz";
-                }
 
-                if (isDivideble(i, 5)) {
-                    output += "Buzz";
-                }
-                if (isDivideble(i, 7)) {
-                    output += "Bang";
-                }
-                if (isDivideble(i, 11)) {
-
-                    output = "Bong";
                 }
             }
 
+            if (isDivideble(i, 5)) {
+                output += "Buzz";
+            }
+            if (isDivideble(i, 7)) {
+                output += "Bang";
+            }
+            if (isDivideble(i, 11)) {
+
+                output = "Bong";
+            }
             if (output.length() == 0) {
                 output = String.valueOf(i);
             }
-            System.out.println(output);
+            System.out.println(i + ") " + output);
         }
     }
 
